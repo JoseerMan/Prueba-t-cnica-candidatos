@@ -1,4 +1,4 @@
-# Prueba tecnica - Proyecto de Gestión de Pacientes con Flask
+# Proyecto de Gestión de Pacientes con Flask
 
 Este es un proyecto para gestionar pacientes utilizando el framework **Flask** en Python. Permite registrar pacientes, buscar por ID, nombre o cédula, listar pacientes y manejar un error 404 en caso de URL no encontrada.
 
@@ -30,49 +30,8 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu sistema:
 Sigue estos pasos para instalar el proyecto en tu máquina local:
 
 ### 1. Clona el repositorio
-Con el siguiente comando clona el repositorio:
-git clone https://github.com/tu-usuario/gestion-pacientes-flask.git
-
-
-### 2. Navega al directorio del proyecto
-En la terminal, navega al directorio del proyecto:
-
-cd gestion-pacientes-flask
-
-### 3. Crea un entorno virtual
-Para evitar conflictos con otras dependencias, crea un entorno virtual:
-python -m venv venv
-
-### 4. Activa el entorno virtual
-En Windows:
-venv\Scripts\activate
-
-### 5. Instala los requerimientos
-Con el entorno virtual activado, instala las dependencias necesarias desde el archivo requirements.txt:
-
-pip install -r requirements.txt
-
-Este comando instalará todas las dependencias necesarias para ejecutar el proyecto, como Flask y otras bibliotecas necesarias.
-
-Instrucciones de Ejecución
-Una vez instaladas las dependencias, puedes ejecutar la aplicación localmente.
-
-
-
-### 1. Inicia el servidor Flask
-Para ejecutar la aplicación, usa el siguiente comando
-
-python app.py
-El servidor Flask debería estar disponible en http://127.0.0.1:5000/.
 
 Primero, clona el repositorio a tu máquina local:
 
-bash
+```bash
 git clone https://github.com/tu-usuario/gestion-pacientes-flask.git
-
-
-### 2. Abre la aplicación en tu navegador
-Accede a la siguiente URL en tu navegador para interactuar con la aplicación:
-
-http://127.0.0.1:5000/
-

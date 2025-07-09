@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Paciente</title>
+    <!-- Incluir el logo como favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.webp') }}" type="image/webp">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Contenido principal de la página -->
+    <div class="container">
+        <!-- Formulario de ingreso de paciente (Card) -->
+        <div class="section">
+            <div class="card">
+                <h1>Formulario de Ingreso de Paciente</h1>
+                <form id="form-paciente">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa el nombre">
+                
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ingresa el apellido">
+                
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                
+                    <label for="genero">Género</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecciona un género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                
+                    <label for="numero_identificacion">Número de Identificación</label>
+                    <input type="text" id="numero_identificacion" name="numero_identificacion" required placeholder="Ingresa el número de identificación">
+                
+                    <button type="submit">Guardar Paciente</button>
+                </form>
+                
+            </div>
+        </div>
+
+        <!-- Sección de búsqueda de pacientes (Card) -->
+        <div class="section">
+            <div class="card">
+                <h2>Buscar Paciente</h2>
+                <form id="form-busqueda">
+                    <label for="buscar-criterio">Buscar por:</label>
+                    <select id="buscar-criterio">
+                        <option value="nombre">Nombre</option>
+                        <option value="cedula">Cédula</option>
+                    </select>
+                    
+                    <input type="text" id="buscar-valor" placeholder="Ingrese valor para buscar">
+                    <button type="submit">Buscar</button>
+                </form>
+                
+                <div id="resultado-busqueda"></div>
+            </div>
+        </div>
+
+        <!-- Sección de listado de pacientes (Card) -->
+        <div class="section">
+            <div class="card">
+                <h2>Listado de Pacientes</h2>
+                <ul id="pacientes-lista">
+                    <!-- Aquí se mostrarán los pacientes -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
