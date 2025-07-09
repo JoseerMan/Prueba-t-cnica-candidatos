@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.webp" alt="Image" width="200">
+</p>
+
 # Proyecto de Gestión de Pacientes con Flask
 
 Este es un proyecto para gestionar pacientes utilizando el framework **Flask** en Python. Permite registrar pacientes, buscar por ID, nombre o cédula, listar pacientes y manejar un error 404 en caso de URL no encontrada.
