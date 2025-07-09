@@ -78,3 +78,53 @@ Accede a la siguiente URL en tu navegador para interactuar con la aplicación:
 
 `` http://127.0.0.1:5000/ ``
 
+---
+
+## Rutas de la API
+
+Este módulo define varias rutas para gestionar pacientes utilizando Flask. A continuación se describen cada una de las rutas disponibles:
+
+### `GET /`
+- **Descripción**: Muestra la página principal (`index.html`).
+- **Respuesta**: HTML
+
+---
+
+### `GET /pacientes`
+- **Descripción**: Obtiene todos los pacientes registrados.
+- **Respuesta**: JSON con la lista de pacientes.
+
+---
+
+### `GET /pacientes/<int:id>`
+- **Descripción**: Obtiene la información de un paciente específico según su ID.
+- **Parámetros**:
+  - `id` (int): ID del paciente.
+  - `nombre` (opcional): Parte del nombre del paciente.
+  - `cedula` (opcional): Número de identificación del paciente.
+- **Respuesta**:
+  - JSON con los pacientes encontrados.
+  - Código 404 si no se encuentran coincidencias.
+  - Código 400 si no se especifica ningún criterio.
+- **Respuesta**: JSON con los datos del paciente o mensaje de error si no se encuentra.
+
+---
+
+### `POST /pacientes`
+- **Descripción**: Guarda un nuevo paciente.
+- **Body (JSON)**:
+  ```json
+  {
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "fecha_nacimiento": "1990-01-01",
+    "genero": "Masculino",
+    "numero_identificacion": "123456789"
+  }
+- **Respuesta**:
+  - Código 201 si se guarda correctamente.
+  - JSON con mensaje y datos del nuevo paciente.
+
+### `Manejador de Errores`
+`404 Not Found`
+
